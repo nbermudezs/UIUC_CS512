@@ -25,3 +25,12 @@ def read_phrase_list(filename, data_folder):
             phrases.append(instance[1])
 
         return np.array(conf), np.array(phrases)
+
+
+def save_cluster_numpy(X, y, data_folder):
+    # np.save(data_folder + '/' + 'cluster-X.np', X)
+    np.save(data_folder + '/' + 'cluster-y.np', y)
+
+
+def load_cluster_numpy(data_folder):
+    return np.load(data_folder + '/' + 'cluster-y.np')
