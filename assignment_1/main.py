@@ -2,8 +2,10 @@ import os
 import numpy as np
 import tensorflow as tf
 from clustering import PhraseClustering
-from io_tools import read_dataset, read_phrase_list
+from io_tools import load_cluster_numpy, read_dataset, read_phrase_list, \
+    save_cluster_numpy
 from metrics import bottom_k, mid_k, top_k
+from plotting import plot_clusters
 
 flags = tf.app.flags
 FLAGS = flags.FLAGS
@@ -15,11 +17,14 @@ flags.DEFINE_string('distance', 'cosine',
                     'Distance function used to compare the vectors')
 flags.DEFINE_string('task', 'metrics',
                     'Define which task this script should perform. '
-                    'Accepts: ["metrics", "clustering"]')
+                    'Accepts: ["metrics", "clustering", "plotting"]')
 flags.DEFINE_integer('k', 30, 'Number of top/bottom results reported')
 flags.DEFINE_string('output', 'metrics.txt',
                     'Where the metrics will be saved. '
                     'Only used when task=metrics')
+flags.DEFINE_string('cluster_folder', 'clusters',
+                    'Location of folder where cluster files will be saved.'
+                    'Relative to data_folder')
 
 
 def main(_):
@@ -52,6 +57,7 @@ def main(_):
                 out.write(entry)
 
     elif FLAGS.task == 'clustering':
+        clusters_folder = data_folder + '/' + FLAGS.cluster_folder
         print('Current step: Reading data set', end='\r')
         y_train, x_train = read_dataset(filename=filename,
                                         data_folder=data_folder)
@@ -63,14 +69,13 @@ def main(_):
 
         # create result files
         print('Current step: Saving clustered phrases', end='\r')
-        clusters_folder = data_folder + '/clusters'
         if not os.path.exists(clusters_folder):
-            os.makedirs(data_folder + '/clusters')
+            os.makedirs(clusters_folder)
 
         cluster_ids = np.unique(y_pred)
         files = {}
         for cluster in cluster_ids:
-            out = open(data_folder + '/clusters' + '/cluster' + str(cluster), 'w')
+            out = open(clusters_folder + '/cluster' + str(cluster) + '.txt', 'w')
             files[cluster] = out
 
         for i, cluster in enumerate(y_pred.tolist()):
@@ -78,6 +83,17 @@ def main(_):
 
         for _, file in files.items():
             file.close()
+
+        print('Current step: Saving numpy files', end='\r')
+        save_cluster_numpy(x_train, y_pred, data_folder)
+    elif FLAGS.task == 'plot':
+        print('Current step: Reading data set', end='\r')
+        y_train, x_train = read_dataset(filename=filename,
+                                        data_folder=data_folder)
+
+        y_pred = load_cluster_numpy(data_folder)
+        print('Current step: Generating plots', end='\r')
+        plot_clusters(x_train, y_pred, FLAGS.n_clusters)
 
 
 if __name__ == '__main__':
