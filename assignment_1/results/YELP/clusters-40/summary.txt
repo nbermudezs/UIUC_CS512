@@ -1,0 +1,6 @@
+Cluster 10: Deserts/Sweets
+Cluster 24: Point of Interest Names
+Cluster 28: Traffic/Vehicle related
+Cluster 29: Drinks
+Cluster 39: Service/Staff/QoS
+Cluster 33: Prices
