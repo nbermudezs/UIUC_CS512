@@ -1,0 +1,1628 @@
+Last login: Fri Feb 16 11:39:55 on ttys002
+~/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1 (master)$ ./experiments.sh | tee -a console.out
+Performing auto_phrase.sh MODEL=models/YELP RAW_TRAIN=data/YELP.txt
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m21.427s
+user	2m18.645s
+sys	0m3.082s
+Detected Language: EN
+Current step: Tokenizing wikipedia phrases...
+No provided expert labels.
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===AutoPhrasing===
+=== Current Settings ===
+Iterations = 2
+Minimum Support Threshold = 10
+Maximum Length Threshold = 6
+POS-Tagging Mode Enabled
+Number of threads = 10
+Labeling Method = DPDN
+	Auto labels from knowledge bases
+	Max Positive Samples = -1
+=======
+Loading data...
+# of total tokens = 34854839
+max word token id = 464849
+# of documents = 230610
+# of distinct POS tags = 57
+Mining frequent phrases...
+selected MAGIC = 464857
+# of frequent phrases = 726741
+Extracting features...
+Constructing label pools...
+	The size of the positive pool = 14627
+	The size of the negative pool = 709980
+# truth patterns = 151835
+Estimating Phrase Quality...
+Segmenting...
+Rectifying features...
+Estimating Phrase Quality...
+Segmenting...
+Dumping results...
+Done.
+
+real	5m37.200s
+user	16m58.745s
+sys	5m23.064s
+===Saving Model and Results===
+===Generating Output===
+Performing auto_phrase.sh MODEL=models/DBLP RAW_TRAIN=data/DBLP.txt
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	1m6.990s
+user	7m19.844s
+sys	0m5.252s
+Detected Language: EN
+Current step: Tokenizing wikipedia phrases...
+No provided expert labels.
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===AutoPhrasing===
+=== Current Settings ===
+Iterations = 2
+Minimum Support Threshold = 10
+Maximum Length Threshold = 6
+POS-Tagging Mode Enabled
+Number of threads = 10
+Labeling Method = DPDN
+	Auto labels from knowledge bases
+	Max Positive Samples = -1
+=======
+Loading data...
+# of total tokens = 111149629
+max word token id = 553953
+# of documents = 5547032
+# of distinct POS tags = 57
+Mining frequent phrases...
+selected MAGIC = 553961
+# of frequent phrases = 1801661
+Extracting features...
+Constructing label pools...
+	The size of the positive pool = 32630
+	The size of the negative pool = 1762570
+# truth patterns = 201855
+Estimating Phrase Quality...
+Segmenting...
+Rectifying features...
+Estimating Phrase Quality...
+Segmenting...
+Dumping results...
+Done.
+
+real	17m25.595s
+user	63m58.159s
+sys	14m13.117s
+===Saving Model and Results===
+===Generating Output===
+/Users/nbermudezs/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.743s
+user	0m42.121s
+sys	0m2.216s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 15531301
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.74574
+
+real	1m30.386s
+user	1m29.619s
+sys	0m0.504s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.468s
+user	0m41.462s
+sys	0m2.258s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 15531301
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.74574
+
+real	1m16.612s
+user	1m15.867s
+sys	0m0.518s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.533s
+user	0m42.166s
+sys	0m2.089s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 9584865
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 2.31162
+
+real	1m15.376s
+user	1m14.295s
+sys	0m0.500s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.787s
+user	0m42.076s
+sys	0m2.422s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 4679344
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 1.12854
+
+real	1m14.227s
+user	1m13.776s
+sys	0m0.338s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.652s
+user	0m41.790s
+sys	0m2.331s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 1037950
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 0.250326
+
+real	1m16.353s
+user	1m15.550s
+sys	0m0.480s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.890s
+user	0m41.684s
+sys	0m2.345s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 15831777
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.81821
+
+real	1m21.498s
+user	1m20.506s
+sys	0m0.670s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.359s
+user	0m42.122s
+sys	0m2.364s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 15831777
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.81821
+
+real	1m20.450s
+user	1m19.730s
+sys	0m0.588s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.958s
+user	0m43.220s
+sys	0m2.352s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 9885341
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 2.38409
+
+real	1m18.034s
+user	1m17.366s
+sys	0m0.511s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.800s
+user	0m40.831s
+sys	0m2.085s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 4979820
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 1.201
+
+real	1m15.960s
+user	1m15.099s
+sys	0m0.530s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.054s
+user	0m44.338s
+sys	0m2.301s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 1338426
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 0.322793
+
+real	1m15.988s
+user	1m14.496s
+sys	0m0.530s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.735s
+user	0m42.393s
+sys	0m2.328s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 16462852
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.97041
+
+real	1m20.981s
+user	1m19.936s
+sys	0m0.661s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.000s
+user	0m43.193s
+sys	0m2.444s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 16462852
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.97041
+
+real	1m23.273s
+user	1m22.420s
+sys	0m0.633s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.889s
+user	0m42.735s
+sys	0m2.330s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 10516416
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 2.53628
+
+real	1m19.039s
+user	1m18.230s
+sys	0m0.570s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.343s
+user	0m42.337s
+sys	0m2.394s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 5610895
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 1.3532
+
+real	1m17.604s
+user	1m16.814s
+sys	0m0.546s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.802s
+user	0m41.489s
+sys	0m2.326s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 1969501
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 0.474992
+
+real	1m9.940s
+user	1m9.478s
+sys	0m0.355s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.469s
+user	0m40.304s
+sys	0m1.973s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 19419321
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 4.68343
+
+real	1m28.630s
+user	1m26.765s
+sys	0m0.991s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.206s
+user	0m43.640s
+sys	0m2.447s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 19419321
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 4.68343
+
+real	1m26.380s
+user	1m25.091s
+sys	0m0.864s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.037s
+user	0m44.279s
+sys	0m2.347s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 13472885
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.24931
+
+real	1m26.753s
+user	1m25.342s
+sys	0m0.842s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.799s
+user	0m43.020s
+sys	0m2.508s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 8567364
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 2.06622
+
+real	1m19.218s
+user	1m18.041s
+sys	0m0.700s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.373s
+user	0m43.859s
+sys	0m2.440s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 4925970
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 1.18802
+
+real	1m19.054s
+user	1m18.030s
+sys	0m0.612s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.776s
+user	0m42.209s
+sys	0m2.312s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 16081291
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.87839
+
+real	1m27.784s
+user	1m25.943s
+sys	0m0.887s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m7.686s
+user	0m39.265s
+sys	0m2.485s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 16081291
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 3.87839
+
+real	1m22.110s
+user	1m21.049s
+sys	0m0.730s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.111s
+user	0m42.123s
+sys	0m2.394s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 10134855
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 2.44426
+
+real	1m23.139s
+user	1m21.752s
+sys	0m0.671s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m9.215s
+user	0m44.385s
+sys	0m2.235s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 5229334
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 1.26118
+
+real	1m30.409s
+user	1m27.552s
+sys	0m1.073s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/YELP                         TEXT_TO_SEG=data/YELP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m8.891s
+user	0m42.512s
+sys	0m2.430s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/YELP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 179881
+# of loaded truth patterns = 166462
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 1587940
+   # of total processed sentences = 4146386
+   avg highlights per sentence = 0.38297
+
+real	1m15.707s
+user	1m15.053s
+sys	0m0.412s
+===Generating Output===
+/Users/nbermudezs/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1
+Running word2vec on last segmented file: ../../AutoPhrase/models/YELP/segmentation-replaced.txt
+Starting training using file ../../AutoPhrase/models/YELP/segmentation-replaced.txt
+Vocab size: 135655
+Words in train file: 28058354
+Alpha: 0.000002  Progress: 100.00%  Words/thread/sec: 77.73k  /Users/nbermudezs/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1
+/Users/nbermudezs/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1
+Performing clustering. n_clusters=10
+Performing clustering. n_clusters=20es
+Performing clustering. n_clusters=40es
+Performing clustering. n_clusters=80es
+Done with YELPSaving numpy fileshrases
+----------------------------------------------------------------
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.431s
+user	1m52.641s
+sys	0m5.168s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 37212301
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 2.82194
+
+real	4m15.469s
+user	4m12.483s
+sys	0m1.704s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m24.156s
+user	1m52.211s
+sys	0m5.336s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 37212301
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 2.82194
+
+real	4m8.212s
+user	4m5.613s
+sys	0m1.533s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.948s
+user	1m51.771s
+sys	0m5.594s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 37211702
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 2.82189
+
+real	4m28.082s
+user	4m24.311s
+sys	0m2.192s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.915s
+user	1m53.609s
+sys	0m5.722s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 18881127
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 1.43182
+
+real	4m4.475s
+user	4m2.324s
+sys	0m1.322s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.9                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m24.510s
+user	1m56.931s
+sys	0m5.579s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.900000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 2520869
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 0.191166
+
+real	4m18.140s
+user	4m14.987s
+sys	0m1.782s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m25.097s
+user	1m56.514s
+sys	0m6.069s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 40292421
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.05551
+
+real	4m44.224s
+user	4m40.971s
+sys	0m2.224s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.451s
+user	1m51.145s
+sys	0m5.193s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 40292421
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.05551
+
+real	4m44.485s
+user	4m40.455s
+sys	0m2.854s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m25.449s
+user	2m1.189s
+sys	0m5.993s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 40291822
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.05547
+
+real	4m9.109s
+user	4m6.503s
+sys	0m1.506s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m24.440s
+user	1m56.336s
+sys	0m5.502s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 21961247
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 1.6654
+
+real	4m3.813s
+user	4m2.169s
+sys	0m1.254s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.7                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.013s
+user	1m51.078s
+sys	0m5.203s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.700000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 5600989
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 0.424742
+
+real	3m53.201s
+user	3m51.652s
+sys	0m1.009s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.003s
+user	1m50.203s
+sys	0m5.160s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 47321928
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.58858
+
+real	4m11.782s
+user	4m9.680s
+sys	0m1.496s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.108s
+user	1m49.177s
+sys	0m5.121s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 47321928
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.58858
+
+real	4m11.763s
+user	4m9.573s
+sys	0m1.532s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.252s
+user	1m49.727s
+sys	0m5.252s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 47321329
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.58854
+
+real	4m9.380s
+user	4m7.147s
+sys	0m1.557s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.279s
+user	1m48.653s
+sys	0m5.434s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 28990754
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 2.19847
+
+real	4m4.436s
+user	4m2.478s
+sys	0m1.417s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.3                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.540s
+user	1m49.377s
+sys	0m5.173s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.300000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 12630496
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 0.957814
+
+real	3m56.102s
+user	3m54.272s
+sys	0m1.174s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.240s
+user	1m51.415s
+sys	0m5.310s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 56438516
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 4.27993
+
+real	4m13.221s
+user	4m11.000s
+sys	0m1.716s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.994s
+user	1m51.772s
+sys	0m5.293s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 56438516
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 4.27993
+
+real	4m12.396s
+user	4m10.016s
+sys	0m1.714s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.549s
+user	1m49.845s
+sys	0m5.433s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 56437917
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 4.27988
+
+real	4m13.460s
+user	4m10.810s
+sys	0m1.766s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m24.450s
+user	1m55.401s
+sys	0m5.469s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 38107342
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 2.88981
+
+real	4m4.528s
+user	4m2.493s
+sys	0m1.426s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.1                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.504s
+user	1m54.710s
+sys	0m5.205s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.100000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 21747084
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 1.64916
+
+real	3m59.271s
+user	3m57.615s
+sys	0m1.253s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.1
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m22.626s
+user	1m47.939s
+sys	0m5.098s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.100000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 42568815
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.22814
+
+real	4m6.373s
+user	4m4.348s
+sys	0m1.418s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.3
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.261s
+user	1m52.835s
+sys	0m5.069s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.300000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 42568815
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.22814
+
+real	4m56.694s
+user	4m54.637s
+sys	0m1.544s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.5
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.977s
+user	1m55.147s
+sys	0m5.183s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.500000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 42568216
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 3.22809
+
+real	4m54.701s
+user	4m52.731s
+sys	0m1.528s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.7
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m22.988s
+user	1m49.516s
+sys	0m5.091s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.700000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 24237641
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 1.83802
+
+real	4m6.234s
+user	4m4.550s
+sys	0m1.283s
+===Generating Output===
+Performing phrasal_segmentation.sh                         MODEL=models/DBLP                         TEXT_TO_SEG=data/DBLP.txt                         HIGHLIGHT_MULTI=0.5                         HIGHLIGHT_SINGLE=0.9
+===Compilation===
+===Tokenization===
+Current step: Tokenizing input file...
+real	0m23.386s
+user	1m51.697s
+sys	0m5.183s
+Detected Language: EN
+===Part-Of-Speech Tagging===
+Current step: Merging...
+===Phrasal Segmentation===
+=== Current Settings ===
+Segmentation Model Path = models/DBLP/segmentation.model
+After the phrasal segmentation, only following phrases will be highlighted with <phrase> and </phrase>
+	Q(multi-word phrases) >= 0.500000
+	Q(single-word phrases) >= 0.900000
+=======
+POS guided model loaded.
+# of loaded patterns = 721815
+# of loaded truth patterns = 234485
+POS transition matrix loaded
+Phrasal segmentation finished.
+   # of total highlighted quality phrases = 7877383
+   # of total processed sentences = 13186794
+   avg highlights per sentence = 0.597369
+
+real	3m54.546s
+user	3m53.128s
+sys	0m1.025s
+===Generating Output===
+Replacing <phrase> in segmented file
+/Users/nbermudezs/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1
+Running word2vec on last segmented file: ../../AutoPhrase/models/DBLP/segmentation-replaced.txt
+Starting training using file ../../AutoPhrase/models/DBLP/segmentation-replaced.txt
+Vocab size: 545056
+Words in train file: 87673500
+Alpha: 0.000059  Progress: 99.77%  Words/thread/sec: 74.78k  /Users/nbermudezs/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1
+/Users/nbermudezs/Documents/Personal/College/UIUC/Spring 2018/CS512.nosync/UIUC_CS512/assignment_1
+Performing clustering. n_clusters=10
+Performing clustering. n_clusters=20es
+Performing clustering. n_clusters=40es
+Performing clustering. n_clusters=80es
+Done with DBLPSaving numpy fileshrases
+----------------------------------------------------------------
