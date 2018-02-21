@@ -3,9 +3,10 @@ import numpy as np
 import tensorflow as tf
 from clustering import PhraseClustering
 from io_tools import load_cluster_numpy, read_dataset, read_phrase_list, \
-    save_cluster_numpy
+    read_segmentation_metrics, save_cluster_numpy
 from metrics import bottom_k, mid_k, top_k
-from plotting import plot_clusters
+from plotting import plot_avg_phrases_curve, plot_clusters, \
+    plot_total_phrases_curve
 
 flags = tf.app.flags
 FLAGS = flags.FLAGS
@@ -94,6 +95,12 @@ def main(_):
         y_pred = load_cluster_numpy(data_folder)
         print('Current step: Generating plots', end='\r')
         plot_clusters(x_train, y_pred, FLAGS.n_clusters)
+    elif FLAGS.task == 'compare':
+        data = read_segmentation_metrics(filename=filename,
+                                         data_folder=data_folder)
+        plot_avg_phrases_curve(data)
+        plot_total_phrases_curve(data)
+
 
 
 if __name__ == '__main__':
