@@ -32,7 +32,7 @@ The following report discusses the result of using AutoPhrase and Word2Vec over 
 
 The data sets in question are a sample of the DBLP and YELP data sets commonly used in data mining performance reports. \\
 
-The code used to perform the experiments can be found on GitHub \footnote{\url{https://github.com/nbermudezs/UIUC_CS512/tree/master/assignment_1}}. 
+The code used to perform the experiments can be found on GitHub \footnote{\url{https://github.com/nbermudezs/UIUC_CS512/tree/master/assignment_1}}. Attached with this report you will find some of the results. These include the mined phrases (both single and multi words), the embeddings for the mined phrases and a file containing all the clusters and the corresponding phrases on each for each of the data sets.
 
 \section*{Setup and Experiment Design}
 The experiments were performed in a macOS system; word2vec was downloaded and compiled using C; the clustering code was written in Python and the code to automatically run all the different setups was written in Bash. All the original code can be found in my GitHub repo.\\
@@ -442,6 +442,7 @@ For each of the settings of the experiment, the number of phrases segmented and 
 	\captionof{table}{Number of phrases and average per sentence.}
 \end{center}
 
+\pagebreak
 
 \subsection*{Clusters}
 Although multiple clustering methods exist, DBSCAN, $k$-Means, AGNES, I decided to use spherical $k$-Means, which is nothing more than the regular $k$-Means using \textbf{cosine} as the distance measure. Experiments were performed using 10, 20, 40 and 80 cluster centers. For the sake of pragmatism only the phrases selected from the clustering with 40 centers are shown in this report but everything else can be found in the GitHub, including best effort labels for some of the clusters. Some interesting finds will be discussed in this section.
@@ -640,6 +641,8 @@ Rail line\\
 Passers by
 \end{multicols}
 
+\pagebreak
+
 \textbf{Cluster 29 (Drinks)}:
 \begin{multicols}{3}
 Margarita\\
@@ -717,24 +720,31 @@ As mentioned before, the clustering was done using 10, 20, 40 and 80 centers. It
 
 For example, for the DBLP data set, when using 10 centers one of them had phrases that could be categorized as "CS Theory" which include things like algorithms, optimization, discrete math; after using 20 centers it was possible to find smaller clusters that were more "specialized", there were clusters that could be identified as "CS Theory | Graphs", "CS Theory | Algorithms", "CS Theory | Optimization". \\
 
+Some specific examples: \\
+\textbf{CS Theory | Optimization}: non-stationary, cost functions, objective functions, probability distributions, covariance matrix, least squares, design problem, Markov chain, confidence interval, stochastic processes.\\
+\textbf{CS Theory | Graphs}: point sets, planar graphs, shortest path, random graph, directed graphs, spanning trees, matching problem, Nash equilibrium, Voronoi diagram.\\
+\textbf{CS Theory | Algorithms}: SAT solver, well behaved, formally proved, Von Neuman, PSPACE-complete, theorem provers, canonical form, mathematical models, PL/I, Allen, formally verified.\\
+
 A similar situation was found for the YELP data set. When using 10 centers there was only one cluster that included phrases that identified "Points of Interest", when using 40 centers at least 3 clusters had POIs in it. Unfortunately I was not able to find a pattern to discern what the difference between those 3 clusters were.\\
+
+The full data, including some named clusters for each number of centers can be found the GitHub repo.
 
 \subsection*{Parameter analysis}
 Finally lets look at how the number of segmented phrases and the average number of phrases per sentence changes as the parameters of the segmentation script change. As mentioned earlier in this report 5 values were tried for each of the highlight thresholds resulting in 25 settings. The following plots represent the changes on both metrics as one of the variables changes while keeping the second fixed.
 
 \subsubsection*{DBLP}
 \begin{multicols}{2}
-\includegraphics[scale=0.3]{n_phrases_dblp.png}
+\includegraphics[scale=0.27]{n_phrases_dblp.png}
 
-\includegraphics[scale=0.3]{avg_phrases_dblp.png}
+\includegraphics[scale=0.27]{avg_phrases_dblp.png}
 \end{multicols}
 
 
 \subsubsection*{YELP}
 \begin{multicols}{2}
-\includegraphics[scale=0.3]{n_phrases_yelp.png}
+\includegraphics[scale=0.27]{n_phrases_yelp.png}
 
-\includegraphics[scale=0.3]{avg_phrases_yelp.png}
+\includegraphics[scale=0.27]{avg_phrases_yelp.png}
 \end{multicols}
 
 
