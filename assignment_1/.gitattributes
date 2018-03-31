@@ -1,2 +1,0 @@
-results/YELP/phrase-filtered.emb filter=lfs diff=lfs merge=lfs -text
-results/DBLP/phrase-filtered.emb filter=lfs diff=lfs merge=lfs -text
